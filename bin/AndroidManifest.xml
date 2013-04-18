@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.os.automaticsilencer"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" >
+    </uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <receiver android:name="com.os.automaticsilencer.Oneshotalarm" >
+        </receiver>
+        <receiver android:name="com.os.automaticsilencer.ScheduleAlarm" >
+        </receiver>
+        <receiver android:name="com.os.automaticsilencer.Restoreshotalarm" >
+        </receiver>
+        <receiver android:name="com.os.automaticsilencer.DeleteAlarm" >
+        </receiver>
+
+        <activity
+            android:name="com.os.automaticsilencer.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.os.automaticsilencer.Input"
+            android:label="@string/title_activity_input"
+            android:parentActivityName="com.os.automaticsilencer.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.os.automaticsilencer.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.os.automaticsilencer.InputActivity"
+            android:label="@string/title_activity_input"
+            android:parentActivityName="com.os.automaticsilencer.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.os.automaticsilencer.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.os.automaticsilencer.Testact"
+            android:label="@string/title_activity_testact" >
+        </activity>
+        <activity
+            android:name="com.os.automaticsilencer.AddData"
+            android:label="@string/title_activity_add_data"
+            android:parentActivityName="com.os.automaticsilencer.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.os.automaticsilencer.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.os.automaticsilencer.ViewSchedule"
+            android:label="@string/title_activity_view_schedule"
+            android:parentActivityName="com.os.automaticsilencer.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.os.automaticsilencer.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.os.automaticsilencer.InputSchedule"
+            android:label="@string/title_activity_input_schedule"
+            android:parentActivityName="com.os.automaticsilencer.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.os.automaticsilencer.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.os.automaticsilencer.ViewSingle"
+            android:label="@string/title_activity_view_single"
+            android:parentActivityName="com.os.automaticsilencer.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.os.automaticsilencer.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
